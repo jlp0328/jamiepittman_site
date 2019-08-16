@@ -1,15 +1,15 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
+      <div class="banner">
+        <h1>Jamie Pittman</h1>
+      </div>
+      <nav class="menu">
+          
       </nav>
-    </header>
-    <slot/>
+      <slot/>
+      <nav class="footer">
+
+      </nav>
   </div>
 </template>
 
@@ -23,8 +23,8 @@ query {
 
 <style>
 @font-face {
-  font-family: Adventure;
-  src: url('../assets/Adventure.otf');
+  font-family: FunSized;
+  src: url('../assets/FunSized.ttf');
   font-weight: normal
 }
 @font-face {
@@ -39,14 +39,41 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
+  height: 100vh;
+  display: grid;
 }
 
-/* .layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-} */
+h1 {
+    font-size: 48px;
+}
+
+.banner{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: FunSized;
+    color: white;
+    background: #DB5D7C;
+}
+
+.menu{
+    background: #4B94A3;
+    color: #FFE7BC;
+}
+
+.footer {
+     background: #4B94A3;
+    color: #FFE7BC;
+}
+
+.layout {
+display: grid;
+grid-template-rows: 20% 10% 60% 10%;
+height: 100vh;
+
+
+}
 
 .header {
   display: flex;

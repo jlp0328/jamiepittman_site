@@ -1,21 +1,16 @@
 <template>
-  <Layout>
-    
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+  <Main>
+    <div class="landing-wrapper">
     <g-image alt="Jamie Pic" src="~/Jamie_Texture.jpg" width="135" />
-    
-    <h1>Jamie Pittman's Site</h1>
    
     <p>
       My personal site is currently under construction... brought to you by Gridsome!
     </p>
+    </div>
 
-    <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
 
-  </Layout>
+
+  </Main>
 </template>
 
 <script>
@@ -27,7 +22,11 @@ export default {
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
+.landing-wrapper {
+  padding: 5%;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 </style>
