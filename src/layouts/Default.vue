@@ -21,17 +21,17 @@ query {
 }
 </static-query>
 
-<style>
-@font-face {
-  font-family: Adventure;
-  src: url('../assets/Adventure.otf');
-  font-weight: normal
-}
-@font-face {
-  font-family:Slapstick;
-  src: url('../assets/Slapstick.ttf');
-  font-weight: normal
-}
+<style lang="scss" scoped>
+// @font-face {
+//   font-family: Adventure;
+//   src: url('../assets/Adventure.otf');
+//   font-weight: normal
+// }
+// @font-face {
+//   font-family:Slapstick;
+//   src: url('../assets/Slapstick.ttf');
+//   font-weight: normal
+// }
 
 body {
   /* font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; */

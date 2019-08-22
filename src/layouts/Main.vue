@@ -1,15 +1,11 @@
 <template>
   <div class="layout">
-      <div class="banner">
-        <h1>Jamie Pittman</h1>
-      </div>
-      <nav class="menu">
-          
-      </nav>
-      <slot/>
-      <nav class="footer">
-
-      </nav>
+    <div class="banner">
+      <h1>Jamie Pittman</h1>
+    </div>
+    <MainMenu/>
+    <slot />
+    <Footer />
   </div>
 </template>
 
@@ -21,69 +17,63 @@ query {
 }
 </static-query>
 
-<style>
-@font-face {
-  font-family: FunSized;
-  src: url('../assets/FunSized.ttf');
-  font-weight: normal
-}
-@font-face {
-  font-family:Slapstick;
-  src: url('../assets/Slapstick.ttf');
-  font-weight: normal
-}
+<script>
+import Footer from '../components/Footer.vue';
+import MainMenu from '../components/MainMenu.vue';
 
+
+export default {
+  components: {
+    Footer,
+    MainMenu
+  }
+};
+</script>
+
+<style lang="scss">
 body {
-  /* font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; */
   font-family: Slapstick;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
-  height: 100vh;
-  display: grid;
-}
-
-h1 {
-    font-size: 48px;
-}
-
-.banner{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: FunSized;
-    color: white;
-    background: #DB5D7C;
-}
-
-.menu{
-    background: #4B94A3;
-    color: #FFE7BC;
-}
-
-.footer {
-     background: #4B94A3;
-    color: #FFE7BC;
 }
 
 .layout {
-display: grid;
-grid-template-rows: 20% 10% 60% 10%;
-height: 100vh;
-
-
+  display: grid;
+  min-width: 320px;
+  grid-template-rows: 20% 10% 60% 10%;
+  height: 100vh;
 }
 
-.header {
+h1 {
+    color: white;
+    text-shadow: 6px -2px black;
+    font-size: 32px;
+    z-index: 2;
+  @media screen and (min-width: $small-devices-bp) {
+    font-size: $phone-banner;
+  }
+  @media (min-width: $med-devices-bp) {
+    font-size: $big-phone-banner;
+  }
+  @media (min-width: $large-devices-bp) {
+    font-size: $tablet-banner;
+  }
+  @media (min-width: $xl-devices-bp) {
+    font-size: $desktop-banner;
+  }
+}
+
+.banner {
+  // width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
+  // opacity: .4;
+  // font-family: FunSized;
+  color: white;
+  // background: $banner-color;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../assets/leopard_print.jpg");
 }
 
-.nav__link {
-  margin-left: 20px;
-}
 </style>

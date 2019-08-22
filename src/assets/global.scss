@@ -1,0 +1,47 @@
+//Fonts
+@font-face {
+  font-family: FunSized;
+  src: url('../assets/FunSized.ttf');
+  font-weight: normal
+}
+@font-face {
+  font-family:Slapstick;
+  src: url('../assets/Slapstick.ttf');
+  font-weight: normal
+}
+
+//Variables
+
+//Breakpoint Sizes
+$small-devices-bp: 576px;
+$med-devices-bp: 768px;
+$large-devices-bp: 992px;
+$xl-devices-bp: 1200px;
+
+//Colors
+$peachy-pink: #DB5D7C;
+$teal: #4B94A3;
+$living-coral: #FA7268;
+
+//Font Sizes
+$desktop-nav: 22px;
+$tablet-nav: 16px;
+$phone-nav: 14px;
+
+$desktop-banner: 55px;
+$tablet-banner: 52px;
+$big-phone-banner: 48px;
+$phone-banner: 42px;
+
+
+    // // Small devices (landscape phones, 576px and up)
+    // @media (min-width: $small-devices-bp) {  }
+
+    // // Medium devices (tablets, 768px and up)
+    // @media (min-width: $med-devices-bp) { ... }
+    
+    // // Large devices (desktops, 992px and up)
+    // @media (min-width: $large-devices-bp) { ... }
+    
+    // // Extra large devices (large desktops, 1200px and up)
+    // @media (min-width: $xl-devices-bp) { ... }
