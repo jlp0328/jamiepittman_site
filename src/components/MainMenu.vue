@@ -29,7 +29,7 @@ components: {
       this.isMobile = (window.innerWidth <= 400) ? true : false;
     }
   },
-  created() {
+  mounted() {
     window.addEventListener("resize", this.checkWidth);
     this.checkIfPhone();
   }
