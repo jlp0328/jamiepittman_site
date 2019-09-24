@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "gridsome": "^0.6.0",
+    "vue-burger-menu": "^2.0.2",
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {

@@ -1,9 +1,8 @@
 <template>
   <div class="layout">
-    <div class="banner">
-      <h1>Jamie Pittman</h1>
-    </div>
-    <MainMenu/>
+    <Banner />
+    <MainMenu />
+    <PageHeader v-if="$mq === 'mobile'" />
     <slot />
     <Footer />
   </div>
@@ -18,14 +17,17 @@ query {
 </static-query>
 
 <script>
-import Footer from '../components/Footer.vue';
-import MainMenu from '../components/MainMenu.vue';
-
+import Banner from "../components/Banner.vue";
+import Footer from "../components/Footer.vue";
+import MainMenu from "../components/MainMenu.vue";
+import PageHeader from "../components/PageHeader.vue";
 
 export default {
   components: {
+    Banner,
     Footer,
-    MainMenu
+    MainMenu,
+    PageHeader
   }
 };
 </script>
@@ -39,17 +41,17 @@ body {
 }
 
 .layout {
-  display: grid;
-  min-width: 320px;
-  grid-template-rows: 20% 10% 60% 10%;
-  height: 100vh;
+  // display: grid;
+  // min-width: 320px;
+  // grid-template-rows: 20% 10% 60% 10%;
+  // height: 100vh;
 }
 
 h1 {
-    color: white;
-    text-shadow: 6px -2px black;
-    font-size: 32px;
-    z-index: 2;
+  color: white;
+  text-shadow: 6px -2px black;
+  font-size: 32px;
+  z-index: 2;
   @media screen and (min-width: $small-devices-bp) {
     font-size: $phone-banner;
   }
@@ -63,17 +65,4 @@ h1 {
     font-size: $desktop-banner;
   }
 }
-
-.banner {
-  // width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // opacity: .4;
-  // font-family: FunSized;
-  color: white;
-  // background: $banner-color;
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../assets/leopard_print.jpg");
-}
-
 </style>
