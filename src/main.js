@@ -5,6 +5,8 @@ import DefaultLayout from '~/layouts/Default.vue';
 import MainLayout from '~/layouts/Main.vue';
 import VueMq from "vue-mq";
 
+require('typeface-merriweather')
+
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);

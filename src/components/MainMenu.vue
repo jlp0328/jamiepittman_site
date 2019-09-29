@@ -8,7 +8,8 @@
       <g-link class="nav__link" to="/contact">Contact</g-link>
     </div>
     <div v-if="$mq === 'mobile'" class="phone-menu">
-      <ClientOnly>
+      <ToggleMenu />
+      <!-- <ClientOnly>
         <Slide noOverlay>
           <g-link class="nav__link" to="/">About Me</g-link>
           <g-link class="nav__link" to="/loving">What I'm Loving...</g-link>
@@ -16,18 +17,20 @@
           <g-link class="nav__link" to="/blog">Blog</g-link>
           <g-link class="nav__link" to="/contact">Contact</g-link>
         </Slide>
-      </ClientOnly>
+      </ClientOnly>-->
     </div>
   </div>
 </template>
 
 <script>
+import ToggleMenu from "../components/ToggleMenu.vue";
 export default {
   components: {
     Slide: () =>
       import("vue-burger-menu")
         .then(m => m.Slide)
-        .catch()
+        .catch(),
+    ToggleMenu
   },
   data() {
     return {

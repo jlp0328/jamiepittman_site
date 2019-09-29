@@ -3,6 +3,7 @@
     <a href="https://twitter.com/jamiepittmandev" target="_blank" class="twitter icon"></a>
     <a href="https://www.instagram.com/jamiepittman.dev/" target="_blank" class="instagram icon"></a>
     <a href="https://www.linkedin.com/in/jlpittman10/" target="_blank" class="linkedin icon"></a>
+    <a href="https://github.com/jlp0328" target="_blank" class="github icon"></a>
   </nav>
 </template>
 

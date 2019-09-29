@@ -9,16 +9,28 @@
   src: url("../assets/Slapstick.ttf");
   font-weight: normal;
 }
+@font-face {
+  font-family: Indonesia;
+  src: url("../assets/Indonesia Merdeka.ttf");
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: "Merriweather", serif;
+}
 
 //Variables
 
-//Breakpoint Sizes
-$small-devices-bp: 576px;
-$med-devices-bp: 768px;
-$large-devices-bp: 992px;
-$xl-devices-bp: 1200px;
+// //Breakpoint Sizes
+// $small-devices-bp: 576px;
+// $med-devices-bp: 768px;
+// $large-devices-bp: 992px;
+// $xl-devices-bp: 1200px;
 
-//Breakpoints from Island Jo Site
+//Breakpoints
 $small-mobile-breakpoint: 359px;
 
 $mobile-min-breakpoint: 360px;
@@ -52,6 +64,13 @@ $tablet-banner: 52px;
 $big-phone-banner: 48px;
 $phone-banner: 42px;
 
+//Main Page Containers
+.main-page-container {
+  @media only screen and (max-width: $mobile-breakpoint) {
+    padding: 10px 20px;
+  }
+}
+
 //Social Media Icons
 .twitter {
   background: transparent url("../assets/twitter.svg") no-repeat;
@@ -63,4 +82,8 @@ $phone-banner: 42px;
 
 .linkedin {
   background: transparent url("../assets/linkedin.svg") no-repeat;
+}
+
+.github {
+  background: transparent url("../assets/github.svg") no-repeat;
 }

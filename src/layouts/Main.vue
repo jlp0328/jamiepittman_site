@@ -28,18 +28,12 @@ export default {
     Footer,
     MainMenu,
     PageHeader
-  }
+  },
+  created() {}
 };
 </script>
 
 <style lang="scss">
-body {
-  font-family: Slapstick;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
 .layout {
   // display: grid;
   // min-width: 320px;
@@ -52,17 +46,5 @@ h1 {
   text-shadow: 6px -2px black;
   font-size: 32px;
   z-index: 2;
-  @media screen and (min-width: $small-devices-bp) {
-    font-size: $phone-banner;
-  }
-  @media (min-width: $med-devices-bp) {
-    font-size: $big-phone-banner;
-  }
-  @media (min-width: $large-devices-bp) {
-    font-size: $tablet-banner;
-  }
-  @media (min-width: $xl-devices-bp) {
-    font-size: $desktop-banner;
-  }
 }
 </style>

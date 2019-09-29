@@ -1,6 +1,6 @@
 <template>
   <Main>
-    <h2>Loving</h2>
+    <div class="main-page-container"></div>
   </Main>
 </template>
 
